@@ -1,4 +1,3 @@
-/* إعدادات عامة */
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +6,14 @@
 }
 
 body {
-    background-color: #0f172a; /* لون الخلفية الداكن اللي في الصورة */
-    color: white;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* تنسيق شريط التنقل (Navbar) */
 nav {
-    background-color: #000; /* خلفية سوداء تماماً */
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +22,7 @@ nav {
 }
 
 .logo {
-    color: #55b4ff; /* لون اللوجو اللبني */
+    color: #55b4ff;
     font-size: 24px;
     font-weight: bold;
 }
@@ -47,7 +44,6 @@ nav {
     color: #55b4ff;
 }
 
-/* حاوية الفورم لتوسط الصفحة */
 .form-container {
     flex: 1;
     display: flex;
@@ -56,31 +52,29 @@ nav {
     padding: 40px 20px;
 }
 
-/* كارت تسجيل الدخول الأبيض */
 #loginForm {
-    background-color: #f8f9fa; /* لون أبيض مريح للعين */
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     padding: 40px;
     border-radius: 12px;
     width: 100%;
     max-width: 450px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    color: #060606; /* لون النصوص داخل الكارت */
+    color: #060606;
 }
 
 #loginForm h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #0b0b0b; /* اللون الباهت اللي في الصورة للعنوان */
+    color: #ffffff;
     font-weight: bold;
 }
 
-/* تنسيق الليبل والمدخلات */
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #666;
+    color: #cbd5f5;
 }
 
 input {
@@ -97,7 +91,6 @@ input:focus {
     border-color: #007bff;
 }
 
-/* الزرار الأزرق */
 button {
     width: 100%;
     background-color: #007bff;
@@ -115,12 +108,11 @@ button:hover {
     background-color: #050505;
 }
 
-/* النصوص خارج الكارت (أسفل الفورم) */
-.form-container + p, 
+.form-container+p,
 #loginForm p {
     text-align: center;
     margin-top: 20px;
-    color: #ff0000;
+    color: #aa1515;
 }
 
 #loginForm p a {
@@ -129,17 +121,17 @@ button:hover {
     font-weight: bold;
 }
 
-/* الفوتر */
 footer {
     text-align: center;
     padding: 20px;
     color: #555;
     font-size: 14px;
-    
+
 }
-.ramzy{
+
+.ramzy {
     padding: 9px;
     font-size: large;
     font-style: initial;
-    
+
 }
