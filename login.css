@@ -1,0 +1,145 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* لون الخلفية الداكن اللي في الصورة */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تنسيق شريط التنقل (Navbar) */
+nav {
+    background-color: #000; /* خلفية سوداء تماماً */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    width: 100%;
+}
+
+.logo {
+    color: #55b4ff; /* لون اللوجو اللبني */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #55b4ff;
+}
+
+/* حاوية الفورم لتوسط الصفحة */
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* كارت تسجيل الدخول الأبيض */
+#loginForm {
+    background-color: #f8f9fa; /* لون أبيض مريح للعين */
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: #060606; /* لون النصوص داخل الكارت */
+}
+
+#loginForm h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #0b0b0b; /* اللون الباهت اللي في الصورة للعنوان */
+    font-weight: bold;
+}
+
+/* تنسيق الليبل والمدخلات */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* الزرار الأزرق */
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #050505;
+}
+
+/* النصوص خارج الكارت (أسفل الفورم) */
+.form-container + p, 
+#loginForm p {
+    text-align: center;
+    margin-top: 20px;
+    color: #ff0000;
+}
+
+#loginForm p a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+    
+}
+.ramzy{
+    padding: 9px;
+    font-size: large;
+    font-style: initial;
+    
+}
