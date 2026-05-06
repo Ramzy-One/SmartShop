@@ -6,13 +6,21 @@
 }
 
 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
+
 
 
 nav {
@@ -47,6 +55,7 @@ nav {
 
 .form-container {
     flex: 1;
+    min-height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,9 +67,10 @@ form {
     padding: 40px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    width: 350px;
+    width: 650px;
+    max-height: 100vh;
+    overflow-y: auto;
     text-align: center;
-
 }
 
 form h1 {

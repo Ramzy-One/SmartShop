@@ -1,21 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #020617;
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #020617;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
 .contact-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: center;
-    padding: 40px 20px;
     text-align: center;
+    padding: 10px;
 }
 
 .contact-container h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
 .contact-container p {
     color: #cbd5f5;
-    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .email {
@@ -23,60 +71,48 @@
 }
 
 #contactForm {
-    margin-top: 30px;
+    margin-top: 15px;
     background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    width: 350px;
+    width: 300px;
     text-align: left;
 }
 
-
 #contactForm label {
     display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
+    margin-bottom: 5px;
+    font-size: 13px;
 }
-
 
 #contactForm input,
 #contactForm textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 12px;
+    border-radius: 6px;
     border: 1px solid transparent;
-    outline: none;
     background-color: #020617;
     color: white;
-    transition: 0.3s;
+    outline: none;
 }
-
 
 #contactForm input:focus,
 #contactForm textarea:focus {
     border: 1px solid #38bdf8;
 }
 
-
-#contactForm input::placeholder,
-#contactForm textarea::placeholder {
-    color: #94a3b8;
-}
-
-
 #contactForm textarea {
     resize: none;
-    height: 100px;
+    height: 80px;
 }
-
 
 #contactForm button {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     background: #38bdf8;
     color: black;
     font-weight: bold;
@@ -88,9 +124,10 @@
     background: #0ea5e9;
 }
 
-
 footer {
+    margin-top: auto;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background-color: #020617;
+    font-size: 14px;
 }
