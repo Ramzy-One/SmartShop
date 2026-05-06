@@ -14,9 +14,10 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #020617;
     color: white;
+    overflow: hidden;
 }
 
 
@@ -26,6 +27,7 @@ nav {
     align-items: center;
     padding: 15px 30px;
     background-color: #020617;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -50,35 +52,38 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px;
+    overflow: hidden;
 }
 
+
 .contact-container h1 {
-    font-size: 28px;
-    margin-bottom: 8px;
+    font-size: 40px;
+    margin-bottom: 5px;
 }
 
 .contact-container p {
     color: #cbd5f5;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .email {
     color: #38bdf8;
 }
 
+
 #contactForm {
-    margin-top: 15px;
+    margin-top: 10px;
     background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    width: 300px;
+    width: 450px;
     text-align: left;
 }
+
 
 #contactForm label {
     display: block;
@@ -89,23 +94,21 @@ nav {
 #contactForm input,
 #contactForm textarea {
     width: 100%;
-    padding: 5px;
+    padding: 10px 12px;
     margin-bottom: 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid transparent;
     background-color: #020617;
     color: white;
     outline: none;
+    font-size: 14px;
 }
 
-#contactForm input:focus,
-#contactForm textarea:focus {
-    border: 1px solid #38bdf8;
-}
 
 #contactForm textarea {
     resize: none;
-    height: 80px;
+    height: 90px;
+
 }
 
 #contactForm button {
@@ -124,8 +127,9 @@ nav {
     background: #0ea5e9;
 }
 
+
 footer {
-    margin-top: auto;
+    flex-shrink: 0;
     text-align: center;
     padding: 10px;
     background-color: #020617;
