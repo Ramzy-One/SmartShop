@@ -30,7 +30,12 @@
     font-size: 20px;
     margin-bottom: 8px;
 }
-
+.shop-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 .shop-card p {
     color: #cbd5e1;
     font-size: 14px;
