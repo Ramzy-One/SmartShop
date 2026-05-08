@@ -104,6 +104,20 @@ input::placeholder {
     color: #64748b;
 }
 
+.login-message {
+    min-height: 24px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #f8fafc;
+}
+
+.login-message.error {
+    color: #fb7185;
+}
+
+.login-message.success {
+    color: #34d399;
+}
 
 button {
     width: 100%;

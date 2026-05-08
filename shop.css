@@ -57,3 +57,58 @@
 footer {
     margin-top: auto;
 }
+
+.theme-toggle {
+    margin-left: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+body.light-mode {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+body.light-mode nav {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode .logo,
+body.light-mode .nav-links li a {
+    color: #0f172a;
+}
+
+body.light-mode p,
+body.light-mode h1,
+body.light-mode footer {
+    color: #0f172a;
+}
+
+body.light-mode footer {
+    background: rgba(248, 250, 252, 0.95);
+}
+
+body.light-mode button {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+body.light-mode .shop-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: #0f172a;
+}
+
+body.light-mode .shop-card p,
+body.light-mode .shop-card .price {
+    color: #334155;
+}
+
+body.light-mode .shop-card button {
+    background: #38bdf8;
+    color: #0f172a;
+}
