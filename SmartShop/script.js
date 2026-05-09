@@ -159,10 +159,45 @@ function handleLogin(event) {
     return;
   }
 
+  const users = JSON.parse(localStorage.getItem('users') || '[]');
+  const user = users.find(u => u.email === email && u.password === password);
+  if (!user) {
+    showLoginMessage('Invalid email or password.', false);
+    return;
+  }
+
   showLoginMessage('Login successful! Redirecting...', true);
   setTimeout(() => {
     window.location.href = 'shop.html';
   }, 800);
+}
+
+function handlesignup(event) {
+  event.preventDefault();
+  const username = document.getElementById('username').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+
+  if (!username || !email || !password) {
+    alert('Please fill all fields');
+    return;
+  }
+
+  if (password.length < 6) {
+    alert('Password must be at least 6 characters');
+    return;
+  }
+
+  const users = JSON.parse(localStorage.getItem('users') || '[]');
+  if (users.find(u => u.email === email)) {
+    alert('Email already exists');
+    return;
+  }
+
+  users.push({username, email, password});
+  localStorage.setItem('users', JSON.stringify(users));
+  alert('Signup successful! Please login.');
+  window.location.href = 'login.html';
 }
 
 window.addEventListener('DOMContentLoaded', () => {
