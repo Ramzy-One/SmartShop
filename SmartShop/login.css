@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: #fff;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #020617;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #38bdf8;
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+}
+
+
+form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 650px;
+    max-height: 100vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+
+form h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+form h1+p {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #020617;
+    color: white;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+.login-message {
+    min-height: 24px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #f8fafc;
+}
+
+.login-message.error {
+    color: #fb7185;
+}
+
+.login-message.success {
+    color: #34d399;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(to right, #38bdf8, #0ea5e9);
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+form p {
+    text-align: center;
+    margin-top: 20px;
+    color: #da0505;
+}
+
+form p a {
+    color: #a855f7;
+    text-decoration: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #020617;
+    color: #94a3b8;
+}
