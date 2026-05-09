@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop For Iphones</title>
+    <link rel="stylesheet" href="indexx.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Iphone Store</div>
+        <ul class="nav-links">
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="cart (1).html">Cart (<span id="cart-count">0</span>)</a></li>
+            <li id="nav-profile" style="display:none;"><a href="profile.html">Profile</a></li>
+            <li id="nav-logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" type="button">Light Mode</button>
+    </nav>
+    <h1>Our Products</h1>
+    <p class="shop-text">Choose your favorite iPhone</p>
+    <div id="cart-message" class="cart-message"></div>
+
+    <section class="shop-container">
+        <div class="shop-card">
+            <h2>iPhone 17 light Blue</h2>
+            <img src="data:image/jpeg;base64,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" alt="i phone photo">
+            <p>128GB - ligth Blue color</p>
+            <span class="price">60,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="shop-card">
+            <h2>iPhone 17 Pro Blue</h2>
+            <img src="file:///D:/Shop.IT/IMG-17problue.webp" alt="i phone photo">
+            <p>256GB - Blue color</p>
+            <span class="price">90,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="shop-card">
+            <h2>iPhone 17 Pro Max</h2>
+            <img src="file:///D:/Shop.IT/IMG-17promaxorange.webp" alt="i phone photo">
+            <p>512GB - Orange color</p>
+            <span class="price">120,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="shop-card">
+            <h2>iPhone 17 Air white</h2>
+            <img src="file:///D:/Shop.IT/IMG-17Air.webp" alt="i phone photo">
+            <p>128GB - Light design</p>
+            <span class="price">50,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="shop-card">
+            <h2>iPhone 16 Black</h2>
+            <img src="file:///D:/Shop.IT/IMG-17%20regular.webp" alt="i phone photo">
+            <p>128GB - Black color</p>
+            <span class="price">38,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="shop-card">
+            <h2>iPhone 16 green</h2>
+            <img src="file:///D:/Shop.IT/iphone16_green.webp" alt="i phone photo">
+            <p>256GB - green</p>
+            <span class="price">42,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="shop-card">
+            <h2>iPhone 16 Pro max</h2>
+            <img src="file:///D:/Shop.IT/16pro.webp" alt="i phone photo">
+            <p>256GB - Titanium</p>
+            <span class="price">85,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="shop-card">
+            <h2>iPhone 15 Pro max</h2>
+            <img src="file:///D:/Shop.IT/img15promax.webp" alt="i phone photo">
+            <p>512GB - Titanium</p>
+            <span class="price">65,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="shop-card">
+            <h2>iPhone 15 plus</h2>
+            <img src="file:///D:/Shop.IT/15%20plus.webp" alt="i phone photo">
+            <p>128GB - Pink</p>
+            <span class="price">54,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="shop-card">
+            <h2>iPhone 13</h2>
+            <img src="file:///D:/Shop.IT/13%20midnight.webp" alt="i phone photo">
+            <p>128GB - Midnight</p>
+            <span class="price">40,000 EGP</span>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Iphone Shop. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
