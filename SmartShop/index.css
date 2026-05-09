@@ -21,9 +21,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.7);
+    background: #0a0a0a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
 
 .logo {
     font-size: 22px;
@@ -116,14 +118,20 @@ footer {
 }
 
 .theme-toggle {
-    margin-left: 20px;
-    padding: 10px 16px;
-    border: none;
+    margin-top: 0;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
     border-radius: 8px;
     background: #38bdf8;
-    color: #0f172a;
+    color: black;
     cursor: pointer;
-    font-size: 14px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.theme-toggle:hover {
+    background: #7dd3fc;
+    transform: scale(1.03);
 }
 
 body.light-mode {

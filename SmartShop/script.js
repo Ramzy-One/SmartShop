@@ -162,13 +162,22 @@ function handleLogin(event) {
   const users = JSON.parse(localStorage.getItem('users') || '[]');
   const user = users.find(u => u.email === email && u.password === password);
   if (!user) {
-    showLoginMessage('Invalid email or password.', false);
+    showLoginMessage('Invalid email or password ,Try to signup.', false);
     return;
   }
 
   showLoginMessage('Login successful! Redirecting...', true);
+
+  // ✅ التعديل: حفظ حالة الـ login والـ redirect
+  localStorage.setItem('loggedIn', 'true');
   setTimeout(() => {
-    window.location.href = 'shop.html';
+    const redirect = localStorage.getItem('redirectAfterLogin');
+    if (redirect) {
+      localStorage.removeItem('redirectAfterLogin');
+      window.location.href = redirect;
+    } else {
+      window.location.href = 'shop.html';
+    }
   }, 800);
 }
 
@@ -194,10 +203,16 @@ function handlesignup(event) {
     return;
   }
 
-  users.push({username, email, password});
+  users.push({ username, email, password });
   localStorage.setItem('users', JSON.stringify(users));
   alert('Signup successful! Please login.');
   window.location.href = 'login.html';
+}
+
+// ✅ التعديل: logout function
+function logout() {
+  localStorage.removeItem('loggedIn');
+  window.location.href = 'index.html';
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -206,8 +221,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
 
+  // ✅ التعديل: التحقق من الـ login قبل الـ Add to Cart
   document.querySelectorAll('.add-to-cart-btn').forEach((button) => {
     button.addEventListener('click', () => {
+      const isLoggedIn = localStorage.getItem('loggedIn');
+      if (!isLoggedIn) {
+        localStorage.setItem('redirectAfterLogin', 'shop.html');
+        window.location.href = 'login.html';
+        return;
+      }
       const card = button.closest('.shop-card');
       if (!card) return;
       const name = card.querySelector('h2')?.textContent?.trim() || 'Unknown product';
