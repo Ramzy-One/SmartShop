@@ -168,7 +168,7 @@ function handleLogin(event) {
 
   showLoginMessage('Login successful! Redirecting...', true);
 
-  // ✅ التعديل: حفظ حالة الـ login والـ redirect
+
   localStorage.setItem('loggedIn', 'true');
   setTimeout(() => {
     const redirect = localStorage.getItem('redirectAfterLogin');
@@ -209,7 +209,7 @@ function handlesignup(event) {
   window.location.href = 'login.html';
 }
 
-// ✅ التعديل: logout function
+
 function logout() {
   localStorage.removeItem('loggedIn');
   window.location.href = 'index.html';
@@ -221,7 +221,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
 
-  // ✅ التعديل: التحقق من الـ login قبل الـ Add to Cart
   document.querySelectorAll('.add-to-cart-btn').forEach((button) => {
     button.addEventListener('click', () => {
       const isLoggedIn = localStorage.getItem('loggedIn');

@@ -31,8 +31,16 @@ nav {
     font-size: 22px;
     font-weight: bold;
     color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+.logo img {
+    max-width: 40px;
+
+    height: auto;
+}
 
 .nav-links {
     list-style: none;
@@ -129,6 +137,7 @@ footer {
     transition: 0.3s;
     white-space: nowrap;
 }
+
 .theme-toggle:hover {
     background: #7dd3fc;
     transform: scale(1.03);
