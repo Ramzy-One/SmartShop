@@ -1,4 +1,4 @@
-</html>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iphone shop.eg</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="mainn.css">
+    <link rel="stylesheet" href="mainn(1).css">
 </head>
 
 <body>
     <nav>
         <div class="logo">Iphone Store
-           <img src="apple logo.png" alt="img logo">
+            <img src="apple logo.png" alt="img logo">
         </div>
         <ul class="nav-links">
             <li> <a href="index.html">Home</a></li>
@@ -21,56 +21,82 @@
             <li><a href="login.html">Login</a></li>
             <li><a href="signup.html">Signup</a></li>
             <li> <a href="Contact.html">Contact</a></li>
+            <li id="nav-logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
         </ul>
         <button id="theme-toggle" class="theme-toggle" type="button">Light Mode</button>
     </nav>
-    <h1>Here Is The Best Price and Service in Egypt</h1>
-    <p class="yousef">Where Apple Users Upgrade</p>
+    <h1>Welcome to the best Iphone Shop</h1>
+    <p class="yousef">Here is the best price and service in Egypt</p>
     <div class="button2">
         <a href="shop.html"><button>Browse Shop</button></a>
-        <section class="video-section">
-        <h2>Watch Our Latest Video</h2>
+    </div>
+    
+    <section class="video-section">
+        <h2>About iPhone</h2>
+        <p class="video-description">Watch this video to learn more about the iPhone design, features, and experience.</p>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/_-AS5DtDeqs" title="Introducing iPhone 17 Pro | Apple" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/_-AS5DtDeqs"
+                title="Introducing iPhone 17 Pro"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
         </div>
     </section>
-    </div>
-    <div id="category-card">
-        <p>The best Seller</p>
 
-        <div class="product">
-            <img src="file:///D:/Shop.IT/IMG-17blue_1.webp" alt="i phone photo">
-            <span>iPhone 17 lightBlue</span>
+    <section class="comparison-section">
+        <div class="section-heading">
+            <h2>Compare iPhone Models</h2>
+            <p>Quick look at some popular iPhones in our store.</p>
         </div>
 
-        <div class="product">
-            <img src="file:///D:/Shop.IT/IMG-17problue.webp" alt="i phone photo">
-            <span>iPhone 17 Pro Blue</span>
+        <div class="table-wrapper">
+            <table class="iphone-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Storage</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>iPhone 17 Pro Max</td>
+                        <td>512GB</td>
+                        <td>120,000 EGP</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 17 Pro</td>
+                        <td>256GB</td>
+                        <td>90,000 EGP</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 17 Air</td>
+                        <td>128GB</td>
+                        <td>50,000 EGP</td>
+                        <td>Limited</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16 Pro Max</td>
+                        <td>256GB</td>
+                        <td>85,000 EGP</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16</td>
+                        <td>128GB</td>
+                        <td>38,000 EGP</td>
+                        <td>In Stock</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    </section>
 
-        <div class="product">
-            <img src="file:///D:/Shop.IT/IMG-17promaxorange.webp" alt="i phone photo">
-            <span>iPhone 17 Pro Max Orange</span>
-        </div>
-
-        <div class="product">
-            <img src="file:///D:/Shop.IT/IMG-17Air.webp" alt="i phone photo">
-            <span>iPhone 17 Air</span>
-        </div>
-    </div>
     <footer>
         <p>&copy; 2026 Iphone Shop. All rights reserved.</p>
-        <div class="team">
-            <p>Presented by:
-            <div class="names">
-                <span>Youssef Omar</span>
-                <span>Ramzy Ayman</span>
-                <span>Hamza Mohamed</span>
-                <span>Mohamed Mahrous</span>
-                <span>Ahmed Rabeaa</span>
-                </p>
-            </div>
-        </div>
     </footer>
     <script src="script.js"></script>
 </body>
