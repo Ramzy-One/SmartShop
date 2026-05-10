@@ -1,281 +1,33 @@
-* {
+root{
+    background-color: #ffffff;
+     --text-color: #000000;
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa; 
+    --navbar-bg: #f8f9fa;       
+    --card-bg: #ffffff;          
+    --border-color: #dddddd;     
+
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: nav(background-color);
+    align-items: center;
+    padding: 14px 30px;
+    background-color: var(background-color);
+    border-bottom: 1px solid var(--border-color);
+ 
+}
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(background-color);
+    color:var(--text-color);
 }
+nav-links{
+display: flex;
+list-style: none;
+gap: 20px;
 
 
-body {
-    background: linear-gradient(to right, #0f172a, #1e293b);
-    color: white;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #38bdf8;
-}
-
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #38bdf8;
-}
-
-
-h1 {
-    margin-top: 80px;
-    font-size: 40px;
-}
-
-
-p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #cbd5e1;
-}
-
-.video-section {
-    margin: 40px auto;
-    padding: 30px;
-    max-width: 900px;
-    width: 90%;
-}
-
-.video-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #cbd5e1;
-}
-
-.video-description {
-    max-width: 650px;
-    margin: 0 auto 20px;
-    color: #cbd5e1;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    aspect-ratio: 16 / 9;
-    margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: 0;
-    border-radius: 12px;
-}
-
-.comparison-section {
-    width: 90%;
-    max-width: 850px;
-    margin: 20px auto 50px;
-    text-align: center;
-}
-
-.section-heading {
-    margin-bottom: 22px;
-}
-
-.section-heading h2 {
-    font-size: 28px;
-    color: #cbd5e1;
-}
-
-.section-heading p {
-    margin: 10px auto 0;
-    color: #cbd5e1;
-}
-
-.table-wrapper {
-    overflow-x: auto;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.iphone-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.iphone-table th,
-.iphone-table td {
-    padding: 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    text-align: center;
-}
-
-.iphone-table th {
-    background: #38bdf8;
-    color: black;
-}
-
-.iphone-table tbody tr:hover {
-    background: rgba(56, 189, 248, 0.08);
-}
-
-#category-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 0px;
-}
-
-#category-card p {
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 180px;
-}
-
-
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-
-.product span {
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.product img:hover {
-    transform: scale(1.05);
-}
-
-button {
-    margin-top: 30px;
-    padding: 12px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background: #38bdf8;
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
-}
-
-
-footer {
-    margin-top: auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-.team {
-    margin-top: 5px;
-}
-
-.names {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.names span {
-    background: rgba(56, 189, 248, 0.15);
-    padding: 3px 6px;
-    border-radius: 20px;
-    color: #cbd5e1;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.names span:hover {
-    background: rgba(56, 189, 248, 0.35);
-    transform: scale(1.05);
-}
-
-body.light-mode .table-wrapper {
-    background: white;
-}
-
-body.light-mode .section-heading h2 {
-    color: #0f172a;
-}
-
-body.light-mode .iphone-table th {
-    background: #38bdf8;
-    color: #0f172a;
-}
-
-body.light-mode .iphone-table td {
-    color: #0f172a;
-}
-
-body.light-mode .iphone-table tbody tr:hover {
-    background: #f0f9ff;
-}
-
-@media (max-width: 700px) {
-    .comparison-section {
-        width: 94%;
-        margin-top: 10px;
-    }
-
-    .section-heading h2 {
-        font-size: 24px;
-    }
-
-    .iphone-table th,
-    .iphone-table td {
-        padding: 13px 14px;
-    }
 }

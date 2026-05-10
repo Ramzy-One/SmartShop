@@ -30,7 +30,7 @@ function addToCart(name, priceText, image) {
   updateCartCount();
   const messageEl = document.getElementById('cart-message');
   if (messageEl) {
-    messageEl.textContent = `${name} get ready,the item is in your card already.`;
+    messageEl.textContent = `${name} has been added to the cart.`;
     messageEl.classList.add('show');
     setTimeout(() => messageEl.classList.remove('show'), 2000);
   }
@@ -144,7 +144,7 @@ function handleLogin(event) {
   const password = document.getElementById('password')?.value;
 
   if (!email || !password) {
-    showLoginMessage('you have to enter your email And password', false);
+    showLoginMessage('Enter your email and password.', false);
     return;
   }
 
@@ -155,18 +155,18 @@ function handleLogin(event) {
   }
 
   if (password.length < 6) {
-    showLoginMessage('give it a try,must be greater than 6.', false);
+    showLoginMessage('Password must be at least 6 characters.', false);
     return;
   }
 
   const users = JSON.parse(localStorage.getItem('users') || '[]');
   const user = users.find(u => u.email === email && u.password === password);
   if (!user) {
-    showLoginMessage('invalid email or password , please try again.', false);
+    showLoginMessage('Invalid email or password ,Try to signup.', false);
     return;
   }
 
-  showLoginMessage('login sucssesfull! Redirecting...', true);
+  showLoginMessage('Login successful! Redirecting...', true);
 
 
   localStorage.setItem('loggedIn', 'true');
