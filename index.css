@@ -255,18 +255,3 @@ body.light-mode #clear-cart-button {
 .cart-message.show {
     opacity: 1;
 }
-.pay-btn{
-    background-color:#0071e3;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    font-size:18px;
-    border-radius:10px;
-    cursor:pointer;
-    margin-top:20px;
-    transition:0.3s;
-}
-
-.pay-btn:hover{
-    background-color:#005bb5;
-}
