@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Iphone Store
+            <img src="E:\it\project it\WhatsApp Image 2026-05-10 at 3.58.16 AM.jpeg" alt="img logo">
+        </div>
+        <ul class="nav-links">
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li id="nav-logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" type="button">Light Mode</button>
+    </nav>
+    <section class="form-container">
+        <form id="loginForm" onsubmit="handlesignup(event)">
+            <h1>Signup</h1>
+            <h2>Create Account</h2>
+
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" id="username" required placeholder="Enter your username">
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" id="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" id="password" required placeholder="Enter your password">
+            </div>
+
+            <button type="submit">Signup</button>
+
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 Iphone Shop. All rights reserved.</p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
