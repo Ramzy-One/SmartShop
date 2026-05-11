@@ -279,3 +279,18 @@ body.light-mode .iphone-table tbody tr:hover {
         padding: 13px 14px;
     }
 }
+.pay-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.pay-btn:hover{
+    background-color: #333;
+}
